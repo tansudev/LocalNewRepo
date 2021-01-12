@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COREBlog.CORE.Entity.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,6 +11,7 @@ namespace COREBlog.CORE.Entity
         public CoreEntity()
         {}
 
+        public static object Enums { get; set; }
         public Guid ID { get ; set; }
         public Status Status { get; set; }
 

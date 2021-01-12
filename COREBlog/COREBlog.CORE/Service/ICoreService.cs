@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 
 
-namespace COREBlog.SERVİCE
+namespace COREBlog.CORE.Service
 {
     public interface ICoreService<T> where T : CoreEntity
     {
@@ -16,6 +16,7 @@ namespace COREBlog.SERVİCE
         bool Remove(Guid id);
         bool RemoveAll(Expression<Func<T,bool>>exp);
         T GetByID(Guid id);
+        T GetByDefault(Expression<Func<T, bool>> exp);
         List<T> GetAcive();
         List<T>GetDefault(Expression <Func<T,bool>>exp);
         List<T> GetAll();

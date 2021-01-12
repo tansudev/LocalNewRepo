@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace COREBlog.CORE.Entity
+namespace COREBlog.CORE.Entity.Enums
 {
     public enum Status
     {
