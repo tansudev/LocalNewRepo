@@ -7,8 +7,77 @@
 
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\site\assets\css\flex-slider.css" />
+    <None Include="wwwroot\site\assets\css\fontawesome.css" />
+    <None Include="wwwroot\site\assets\css\owl.css" />
+    <None Include="wwwroot\site\assets\css\templatemo-stand-blog.css" />
+    <None Include="wwwroot\site\assets\fonts\Flaticon.woff" />
+    <None Include="wwwroot\site\assets\fonts\flexslider-icon.eot" />
+    <None Include="wwwroot\site\assets\fonts\flexslider-icon.svg" />
+    <None Include="wwwroot\site\assets\fonts\flexslider-icon.ttf" />
+    <None Include="wwwroot\site\assets\fonts\flexslider-icon.woff" />
+    <None Include="wwwroot\site\assets\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\site\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\site\assets\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\site\assets\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\site\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\site\assets\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\site\assets\fonts\slick.eot" />
+    <None Include="wwwroot\site\assets\fonts\slick.svg" />
+    <None Include="wwwroot\site\assets\fonts\slick.ttf" />
+    <None Include="wwwroot\site\assets\fonts\slick.woff" />
+    <None Include="wwwroot\site\assets\images\about-us.jpg" />
+    <None Include="wwwroot\site\assets\images\banner-item-01.jpg" />
+    <None Include="wwwroot\site\assets\images\banner-item-02.jpg" />
+    <None Include="wwwroot\site\assets\images\banner-item-03.jpg" />
+    <None Include="wwwroot\site\assets\images\banner-item-04.jpg" />
+    <None Include="wwwroot\site\assets\images\banner-item-05.jpg" />
+    <None Include="wwwroot\site\assets\images\banner-item-06.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-post-01.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-post-02.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-post-03.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-thumb-01.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-thumb-02.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-thumb-03.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-thumb-04.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-thumb-05.jpg" />
+    <None Include="wwwroot\site\assets\images\blog-thumb-06.jpg" />
+    <None Include="wwwroot\site\assets\images\comment-author-01.jpg" />
+    <None Include="wwwroot\site\assets\images\comment-author-02.jpg" />
+    <None Include="wwwroot\site\assets\images\comment-author-03.jpg" />
+    <None Include="wwwroot\site\assets\images\cta-bg.jpg" />
+    <None Include="wwwroot\site\assets\images\heading-bg.jpg" />
+    <None Include="wwwroot\site\assets\js\accordions.js" />
+    <None Include="wwwroot\site\assets\js\custom.js" />
+    <None Include="wwwroot\site\assets\js\isotope.js" />
+    <None Include="wwwroot\site\assets\js\owl.js" />
+    <None Include="wwwroot\site\assets\js\slick.js" />
+    <None Include="wwwroot\site\vendor\bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\site\vendor\jquery\jquery.min.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\COREBlog.MODEL\COREBlog.MODEL.csproj" />
+    <ProjectReference Include="..\COREBlog.SERVİCE\COREBlog.SERVİCE.csproj" />
   </ItemGroup>
 
 </Project>

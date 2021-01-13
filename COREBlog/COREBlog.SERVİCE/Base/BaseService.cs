@@ -9,9 +9,9 @@ using System.Text;
 using System.Transactions;
 using System.Linq;
 
-namespace COREBlog.SERVİCE.Base
+namespace COREBlog.SERVICE.Base
 {
-    class BaseService<T> : ICoreService<T> where T : CoreEntity
+    public class BaseService<T> : ICoreService<T> where T : CoreEntity
     {
         private readonly BlogContext context;
         public BaseService(BlogContext _context)

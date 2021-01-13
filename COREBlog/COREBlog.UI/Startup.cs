@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using COREBlog.CORE.Service;
+using COREBlog.MODEL.Context;
+using COREBlog.SERVICE.Base;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -31,7 +35,13 @@ namespace COREBlog.UI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDbContext<BlogContext>(options =>
+            {
+                options.UseSqlServer("server=.; database=BuBiBlogDB; uid=sa; pwd=123;");
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            });
 
+            services.AddScoped(typeof(ICoreService<>), typeof(BaseService<>));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
