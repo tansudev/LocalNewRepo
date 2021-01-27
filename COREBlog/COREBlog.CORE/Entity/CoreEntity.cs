@@ -11,13 +11,12 @@ namespace COREBlog.CORE.Entity
         public CoreEntity()
         {}
 
-        public static object Enums { get; set; }
         public Guid ID { get ; set; }
         public Status Status { get; set; }
 
-        public DateTime? CreateDate { get; set; }
-        public string  CreateComputerName { get; set; }
-        public string  CreateIP { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public string  CreatedComputerName { get; set; }
+        public string  CreatedIP { get; set; }
 
         public DateTime? ModifiedDate { get; set; }
         public string ModifiedComputerName { get; set; }

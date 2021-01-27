@@ -7,7 +7,7 @@ namespace COREBlog.MODEL.Entities
 {
     public class Comment : CoreEntity
     {
-        public string CommenText { get; set; }
+        public string CommentText { get; set; }
         public virtual User User { get; set; }
         public virtual Post Post { get; set; }
 

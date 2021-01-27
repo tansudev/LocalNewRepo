@@ -57,9 +57,9 @@ namespace COREBlog.MODEL.Context
                             entity.ModifiedDate = date;
                             break;
                         case EntityState.Added:
-                            entity.CreateComputerName = computerName;
-                            entity.CreateIP = ipAddress;
-                            entity.CreateDate = date;
+                            entity.CreatedComputerName = computerName;
+                            entity.CreatedIP = ipAddress;
+                            entity.CreatedDate = date;
                             break;
 
                     }

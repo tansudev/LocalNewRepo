@@ -36,11 +36,13 @@ namespace COREBlog.UI.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.Categories = cs.GetAcive();
             return View(ps.GetAcive());
         }
 
         public IActionResult PostByCategoryID(Guid id)
         {
+            ViewBag.Categories = cs.GetAcive();
             return View(ps.GetDefault(x => x.CategoryID == id).ToList());
         }
 
@@ -49,8 +51,14 @@ namespace COREBlog.UI.Controllers
             Post post = ps.GetByID(id);
             post.ViewCount++;
             ps.Update(post);
-            
-            return View(Tuple.Create < Post, User, List<Category>, List<Comment>>(post, us.GetByID(post.UserID), cs.GetAcive(), cms.GetDefault(x => x.Post.ID == id)));
+
+            return View(Tuple.Create<Post, User, Category, List<Category>, List<Comment>>(post, us.GetByID(post.UserID), cs.GetByID(post.CategoryID), cs.GetAcive(), cms.GetDefault(x => x.Post.ID == id)));
         }
+
+        //public PartialViewResult _CategoriesPartial()
+        //{
+        //    ViewBag.Categories = cs.GetAcive();
+        //    return PartialView();
+        //}
     }
 }

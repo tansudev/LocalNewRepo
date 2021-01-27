@@ -9,8 +9,6 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
-    <title>Stand CSS Blog by TemplateMo</title>
-
     <!-- Bootstrap core CSS -->
     <link href="~/site/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,15 +32,15 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><h2>BU BI BLOG<em>.</em></h2></a>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><h2>BU BI BLOG<em>.</em></h2></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">
-                                Home
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">
+                                Anasayfa
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
@@ -50,13 +48,13 @@
                             <a class="nav-link" href="about.html">Hakkımızda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog Entries</a>
+                            <a class="nav-link" href="blog.html">Tüm Yazılar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="post-details.html">Post Details</a>
+                            <a class="nav-link" href="post-details.html">İletişim</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <a class="nav-link" asp-controller="Account" asp-action="Login">Giriş Yap</a>
                         </li>
                     </ul>
                 </div>

@@ -80,4 +80,10 @@
     <ProjectReference Include="..\COREBlog.SERVİCE\COREBlog.SERVİCE.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Areas\Administrator\Data\" />
+    <Folder Include="Areas\Administrator\Models\" />
+  </ItemGroup>
+
 </Project>

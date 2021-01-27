@@ -120,15 +120,15 @@
                             <div class="col-lg-12">
                                 <div class="blog-post">
                                     <div class="blog-thumb">
-                                        <img src="~/@item.ImagePath" alt="">
+                                        <img src="~/uploads/@item.ImagePath" alt="">
                                     </div>
                                     <div class="down-content">
-                                        @*<span>@Html.DisplayFor(x => x.)</span>*@
-                                        @*TO DO KAtegori NAme ve USerName???*@
+                                        @*TODO: Category Name ve UserName???*@
+                                        <span>@*@item.Category.CategoryName*@</span>
                                         <a href="post-details.html"><h4>@item.Title</h4></a>
                                         <ul class="post-info">
-                                            @*<li><a href="#">@item.User.FirstName</a></li>*@
-                                            <li><a href="#">@item.CreateDate</a></li>
+                                            <li><a href="#">@*@item.User.FirstName*@</a></li>
+                                            <li><a href="#">@item.CreatedDate</a></li>
                                             <li><a href="#">12 Comments</a></li>
                                         </ul>
                                         <p>@item.PostDetail</p>
@@ -209,12 +209,10 @@
                                 </div>
                                 <div class="content">
                                     <ul>
-                                        <li><a href="#">- Nature Lifestyle</a></li>
-                                        <li><a href="#">- Awesome Layouts</a></li>
-                                        <li><a href="#">- Creative Ideas</a></li>
-                                        <li><a href="#">- Responsive Templates</a></li>
-                                        <li><a href="#">- HTML5 / CSS3 Templates</a></li>
-                                        <li><a href="#">- Creative &amp; Unique</a></li>
+                                        @foreach (Category item in ViewBag.Categories)
+                                        {
+                                            <li><a asp-controller="Home" asp-action="PostByCategoryID" asp-route-id="@item.ID"> - @item.CategoryName</a></li>
+                                        }
                                     </ul>
                                 </div>
                             </div>

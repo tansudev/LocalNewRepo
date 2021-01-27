@@ -4,6 +4,7 @@
 
 @model List<Post>
 
+
 <div class="main-banner header-text">
     <div class="container-fluid">
         <div class="owl-banner owl-carousel">
@@ -139,18 +140,20 @@
                     <div class="row">
                         @foreach(Post item in Model)
                         {
+                            
                          <div class="col-lg-12">
                             <div class="blog-post">
                                 <div class="blog-thumb">
-                                    <img src="@item.ImagePath" alt="">
+                                    <img src="~/uploads/@item.ImagePath" alt="">
                                 </div>
                                 <div class="down-content">
-                                    @*<span>@Html.DisplayFor(x => x.)</span>*@
-                                    @*TO DO KAtegori NAme ve USerName???*@
-                                    <a href="post-details.html"><h4>@item.Title</h4></a>
+
+                                    @*TODO: CategoryName ve User FirtsName çekilecek *@
+                                    <span>@*@item.Category.CategoryName*@</span>
+                                    <a asp-controller="Home" asp-action="Post" asp-route-id="@item.ID"><h4>@item.Title</h4></a>
                                     <ul class="post-info">
-                                        @*<li><a href="#">@item.User.FirstName</a></li>*@
-                                        <li><a href="#">@item.CreateDate</a></li>
+                                        <li><a href="#">@*@item.User.FirstName*@</a></li>
+                                        <li><a href="#">@item.CreatedDate</a></li>
                                         <li><a href="#">12 Comments</a></li>
                                     </ul>
                                     <p>@item.PostDetail</p>
@@ -159,7 +162,7 @@
                                             <div class="col-6">
                                                 <ul class="post-tags">
                                                     <li><i class="fa fa-tags"></i></li>
-                                                    <li><a href="#">@item.Tags</a>,</li>
+                                                    <li><a href="#">@item.Tags</a></li>
                                                     @*<li><a href="#">Nature</a></li>*@
                                                 </ul>
                                             </div>
@@ -231,12 +234,10 @@
                                 </div>
                                 <div class="content">
                                     <ul>
-                                        <li><a href="#">- Nature Lifestyle</a></li>
-                                        <li><a href="#">- Awesome Layouts</a></li>
-                                        <li><a href="#">- Creative Ideas</a></li>
-                                        <li><a href="#">- Responsive Templates</a></li>
-                                        <li><a href="#">- HTML5 / CSS3 Templates</a></li>
-                                        <li><a href="#">- Creative &amp; Unique</a></li>
+                                        @foreach (Category item in ViewBag.Categories)
+                                        {
+                                            <li><a asp-controller="Home" asp-action="PostByCategoryID" asp-route-id ="@item.ID"> - @item.CategoryName</a></li>
+                                        }
                                     </ul>
                                 </div>
                             </div>
@@ -267,7 +268,7 @@
 </section>
 
 @section Scripts{ 
-<script language="text/Javascript">
+    <script language="text/Javascript">
 
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
       function clearField(t){                   //declaring the array outside of the
@@ -276,6 +277,9 @@
           t.value='';         // with more chance of typos
           t.style.color='#fff';
           }
-      }
-</script>
+    }
+
+
+
+    </script>
 }
