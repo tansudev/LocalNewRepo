@@ -71,7 +71,7 @@
     <None Include="wwwroot\site\assets\js\owl.js" />
     <None Include="wwwroot\site\assets\js\slick.js" />
     <None Include="wwwroot\site\vendor\bootstrap\css\bootstrap.min.css" />
-    <None Include="wwwroot\site\vendor\jquery\jquery.min.js" />
+    <None Include="wwwroot\site\vendor\bootstrap\jquery\jquery.min.js" />
   </ItemGroup>
 
 

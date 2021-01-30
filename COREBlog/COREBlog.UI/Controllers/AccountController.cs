@@ -37,7 +37,7 @@ namespace COREBlog.UI.Controllers
                     new Claim(ClaimTypes.Name, logged.FirstName),
                     new Claim(ClaimTypes.Surname, logged.LastName),
                     new Claim(ClaimTypes.Email, logged.EmailAddress),
-                   // new Claim("Image", logged.ImageURL)
+                    new Claim("Image", logged.ImageURL)
                 };
 
                 var userIdentity = new ClaimsIdentity(claims, "login");
